@@ -10,7 +10,7 @@ PadCom makes it easy to create realistic launch sequences, and monitor your laun
 [Be sure to check out PadCom's sister project!](https://github.com/RockoonTechnologies/BoardCom)
 ### Features
  - Works with any arduino board and the Arrow Flight Computer
- - Supports custom messages
+ - Supports custom messages/functions
  - Multiple launch time options
  - Safe Abort system that will disable the pad in case of emergency
  - Can be customized inside the Arduino IDE
