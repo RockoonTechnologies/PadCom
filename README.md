@@ -95,3 +95,8 @@ Ex: ```mainCom("getready", true);``` - custom message = getready, will launch wh
 - Finalize custommsg
 - [x] Make lib 
 - Add support for minutes
+
+# Extra Info
+
+- Can support any Arduino Device (still test Mbed OS)
+- Palette: https://coolors.co/000f08-136f63-e0ca3c-f34213-3e2f5b
