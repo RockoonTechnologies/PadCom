@@ -1,4 +1,4 @@
-# BoardCom
+# PadCom
 A Communication UI/Terminal for controling the Arrow Flight Computer in Pad Configuration or controlling your own projects!
 ![IDE PIC](https://i.imgur.com/Cn5pzh5.png)
 
