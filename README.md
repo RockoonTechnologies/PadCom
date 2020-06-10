@@ -1,12 +1,13 @@
 # PadCom
 A Communication UI and Arduino library for controling the Arrow Flight Computer in Pad Configuration or controlling your own projects!
+
 ![IDE PIC](https://i.imgur.com/Cn5pzh5.png)
 
 
 PadCom is a Processing (Java) based application that reads, interprets and sends data via Serial. 
 PadCom makes it easy to create realistic launch sequences, and monitor your launchpad up to the first seconds of flight!
 
-PadCom is compatiable with "PadComLib" which is a Arduino Library that adds support for PadCom in only three lines!
+PadCom is compatiable with "PadComLib" which is a Arduino Library that adds support for PadCom in only three lines and a very easy API!
 
 [Be sure to check out PadCom's sister project (BoardCom)!](https://github.com/RockoonTechnologies/BoardCom)
 ### Features
