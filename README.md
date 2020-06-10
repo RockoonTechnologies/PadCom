@@ -59,7 +59,7 @@ The Library can be implemented in only three lines of code.
  
  ##### Initialize
  
- ```initialize();``` simply enables Serial and establishes communication with the PadCom. ```initialize()``` should be located in the ```void Setup()``` section of your code, and is a boolean meaning it can be configured to be "true" or "false", On and Off respectively.
+ ```initialize();``` simply enables Serial and establishes communication with the PadCom, this means appending ```Serial.begin(9600);``` is not needed, and may cause errors if used. ```initialize()``` should be located in the ```void Setup()``` section of your code, and is a boolean meaning it can be configured to be "true" or "false", On and Off respectively.
  Ex: ```initialize(true);```
  
 ##### padStatus
