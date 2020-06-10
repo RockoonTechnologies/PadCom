@@ -23,7 +23,7 @@ PadCom is compatiable with "PadComLib" (PRE-ALPHA) which is a Arduino Library th
 # Setup:
 
 ## PadCom
-To setup PadCom, copy/download the application folder from the directory.
+To setup PadCom, copy/download the installer from the directory.
 
 *PadCom requires the latest version of Java & is only verified to work on Windows 10 
 
