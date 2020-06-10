@@ -19,6 +19,7 @@ PadCom is compatiable with "PadComLib" which is a Arduino Library that adds supp
 
 
 # Setup:
+
 ## PadCom
 To setup PadCom, copy/download the application folder from the directory.
 
@@ -37,9 +38,8 @@ Download the library zip;
 ## PadCom
 ![IDE PIC](https://i.imgur.com/Cn5pzh5.png)
 
-The light green button labled "Launch Now" will begin the countdo
-wn at T-20 seconds
-The light yellow button labled "Begin Countdown" will begin the countdown at T-300 seconds
+The light green button labled "Launch Now" will begin the countdown at T-20 seconds.
+The light yellow button labled "Begin Countdown" will begin the countdown at T-300 seconds.
 Clicking the Red "Abort Button" will instantly pause the countdown and disarm the pad. Clicking one of the prior buttons will restart the countdown at there respective times.
 
 ### Send a Custom Message 
@@ -66,13 +66,15 @@ The Library can be implemented in only three lines of code.
 ##### padStatus
  ```padStatus();``` sends the status of the launchpad to the PadCom program. ```padStatus();``` can be located in any function of your code. ```padStatus();```  is a limited string meaning it can be set to parenthesis (ie: ```padStatus("Idle");```) or a String Variable.
 
-**HOWEVER*** ```padStatus();``` can only be three modes: Idle, Countdown, Abort. Any-other string presented will be ignored and no data will be sent.
+*HOWEVER*  ```padStatus();``` can only be three modes: Idle, Countdown, Abort. Any-other string presented will be ignored and no data will be sent. Ex: ```padStatus("Countdown");```
 
 ##### mainCom
- ```mainCom();``` sends is the main communication function of the library, so far it controls actual launch commands and custom messages. ```mainCom();``` can be located in any function of your code. ```mainCom();``` requires two operators, a string and a boolean  (ex: ```mainCom("custommsg", true);```) the string is the custom message, make this the custom text (no spaces, cap sensitive, numbers may be clipped) that you type in PadCom that sets an action.
+ ```mainCom();``` sends is the main communication function of the library, so far it controls actual launch commands and custom messages. ```mainCom();``` can be located in any function of your code.  ```mainCom();``` requires two operators, a string and a boolean  (ex: ```mainCom("custommsg", true);```) the string is the custom message, make this the custom text (no spaces, cap sensitive, numbers may be clipped) that you type in PadCom that sets an action.
+ 
  *note: the ability to add a custom action is not available yet in the library*
  The boolean controls whether you want to launch; "true" means yes, "false" means no
 
+Ex: ```mainCom("getready", true);``` - custom message = getready, will launch when command is sent
 
 
 # Troubleshooting (PadCom)
