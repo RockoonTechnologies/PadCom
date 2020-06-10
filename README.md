@@ -25,7 +25,8 @@ To setup PadCom, copy/download the application folder from the directory.
 *PadCom requires the latest version of Java & is only verified to work on Windows 10 
 
 Create a shortcut to for the .exe file, and your all set!
-Note: Upon the execution of PadCom, the program may take several seconds to finalize and interpret the data
+
+Note: Upon the execution of PadCom, the program may take several seconds to finalize and interpret the data, make sure your device is plugged in
 
 ## PadComLib
 Download the library zip;
