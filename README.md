@@ -18,6 +18,15 @@ PadCom is compatiable with "PadComLib" (PRE-ALPHA) which is a Arduino Library th
  - Multiple launch time options
  - Safe Abort system that will disable the pad in case of emergency
  - Has custom library that supports all above features within the Arduino IDE (also supports the Web IDE)
+ - Can test pyro systems (v1.1)
+
+
+## Changelog (6/10/20)
+
+ - Updated everything for v1.1 (installer, lib)
+ - Added Pyro Testing feature
+ - Updated UI to avoid clipping
+ - Fixed ```mainCom``` glitch
 
 
 # Setup:
