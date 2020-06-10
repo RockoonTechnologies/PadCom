@@ -70,6 +70,7 @@ Clicking the Red "Abort Button" will instantly pause the countdown and disarm th
 The Library can be implemented in only four lines of code.
 
 *Make sure to add ```#include <PadComLib.h>``` to the beginning of your code
+
  
  ##### Initialize
  
@@ -85,7 +86,7 @@ The Library can be implemented in only four lines of code.
  ```mainCom();``` sends is the main communication function of the library, so far it controls actual launch commands and custom messages. ```mainCom();``` can be located in any function of your code.  ```mainCom();``` requires four operators, a string, boolean a integer and another string (ex: ```mainCom("custommsg", true, 9, "HIGH);```) the first string is the custom message, make this your custom text (no spaces, cap sensitive, numbers may be clipped) that you type in PadCom that sets an action.
  
  *note: the ability to add a custom action is not available yet in the library*
- The boolean controls whether you want to launch; "true" means yes, "false" means no. 
+ The boolean controls whether you want to launch; "true" means yes, "false" means no. This also applies to the Pyro Testing Feature
  
  Think of the last two variables like the ```digitalWrite()``` function, the integer is the pin (has to be digital) and the String is ```HIGH``` or ```Low```. This is the actual action that takes place when launch is set to happen, so if you have a mosfet (for example) on pin 9 that controls the pyro, you use that.
  
