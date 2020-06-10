@@ -49,13 +49,6 @@ Clicking the Red "Abort Button" will instantly pause the countdown and disarm th
  
  A Custom message can be easily linked to an action on your device.
 
-# Demo:
-
-A quick demonstration of the functionality of PadCom is in the Demo folder.
-
-Using the Arduino IDE, load the provided .ino file onto the your Arduino device. Then procceed to execute the PadCom application.
-You can start a countdown with the respective button(s), Abort and send a preconfigured custom message ("poll", which just blinks leds)
-
 
 
 # Integration (Syntax) - How to add support for your board
