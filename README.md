@@ -83,7 +83,7 @@ Ex: ```mainCom("getready", true);``` - custom message = getready, will launch wh
 
 # Troubleshooting (PadCom)
 
-*I installed the program but on boot the program is static and is a frozen grey window*
+*I installed the program but on boot the program is static and is a frozen grey window, like my soul*
 
 
    This can be a number of reasons. Make sure java is installed and you have the correct version for your architecture.
