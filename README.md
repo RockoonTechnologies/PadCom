@@ -73,12 +73,16 @@ The Library can be implemented in only four lines of code.
 *HOWEVER*  ```padStatus();``` can only be three modes: Idle, Countdown, Abort. Any-other string presented will be ignored and no data will be sent. Ex: ```padStatus("Countdown");```
 
 ##### mainCom
- ```mainCom();``` sends is the main communication function of the library, so far it controls actual launch commands and custom messages. ```mainCom();``` can be located in any function of your code.  ```mainCom();``` requires two operators, a string and a boolean  (ex: ```mainCom("custommsg", true);```) the string is the custom message, make this the custom text (no spaces, cap sensitive, numbers may be clipped) that you type in PadCom that sets an action.
+ ```mainCom();``` sends is the main communication function of the library, so far it controls actual launch commands and custom messages. ```mainCom();``` can be located in any function of your code.  ```mainCom();``` requires four operators, a string, boolean a integer and another string (ex: ```mainCom("custommsg", true, 9, "HIGH);```) the first string is the custom message, make this your custom text (no spaces, cap sensitive, numbers may be clipped) that you type in PadCom that sets an action.
  
  *note: the ability to add a custom action is not available yet in the library*
- The boolean controls whether you want to launch; "true" means yes, "false" means no
+ The boolean controls whether you want to launch; "true" means yes, "false" means no. 
+ 
+ Think of the last two variables like the ```digitalWrite()``` function, the integer is the pin (has to be digital) and the String is ```HIGH``` or ```Low```. This is the actual action that takes place when launch is set to happen, so if you have a mosfet (for example) on pin 9 that controls the pyro, you use that.
+ 
+ *The pin still must be set as a ouput in ```void setup()```
 
-Ex: ```mainCom("getready", true);``` - custom message = getready, will launch when command is sent
+Ex: ```mainCom("getready", true, 9, HIGH);``` - custom message = getready, will launch when command is sent, send HIGH to pin 9
 
 
 # Troubleshooting (PadCom)
