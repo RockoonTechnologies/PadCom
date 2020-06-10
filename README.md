@@ -9,7 +9,7 @@ PadCom makes it easy to create realistic launch sequences, and monitor your laun
 
 
 
-PadCom is compatiable with "PadComLib" (PRE-ALPHA) which is a Arduino Library that adds support for PadCom in only three lines and a very easy API!
+PadCom is compatiable with "PadComLib" (PRE-ALPHA) which is a Arduino Library that adds support for PadCom in only four lines and a very easy API!
 
 [Be sure to check out PadCom's sister project (BoardCom)!](https://github.com/RockoonTechnologies/BoardCom)
 ### Features
@@ -58,7 +58,9 @@ Clicking the Red "Abort Button" will instantly pause the countdown and disarm th
 
 ![code pic](https://i.imgur.com/ZIsldn3.png)
 
-The Library can be implemented in only three lines of code.
+The Library can be implemented in only four lines of code.
+
+*Make sure to add ```#include <PadComLib.h>``` to the beginning of your code
  
  ##### Initialize
  
