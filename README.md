@@ -1,5 +1,5 @@
 # PadCom & PadComLib
-A Communication UI and Arduino library for controling the Arrow Flight Computer in Pad Configuration or controlling your own projects!
+A Communication UI and Arduino library for controlling the Arrow Flight Computer in Pad Configuration or controlling your own projects/devices!
 
 ![IDE PIC](https://i.imgur.com/Cn5pzh5.png)
 
