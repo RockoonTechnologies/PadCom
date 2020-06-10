@@ -8,7 +8,7 @@ PadCom makes it easy to create realistic launch sequences, and monitor your laun
 
 PadCom is compatiable with "PadComLib" which is a Arduino Library that adds support for PadCom in only three lines!
 
-[Be sure to check out PadCom's sister project!](https://github.com/RockoonTechnologies/BoardCom)
+[Be sure to check out PadCom's sister project (BoardCom)!](https://github.com/RockoonTechnologies/BoardCom)
 ### Features
  - Works with any arduino board and the Arrow Flight Computer
  - Supports custom messages/functions
