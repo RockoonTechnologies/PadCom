@@ -1,11 +1,12 @@
 # PadCom
-A Communication UI/Terminal for controling the Arrow Flight Computer in Pad Configuration or controlling your own projects!
+A Communication UI and Arduino library for controling the Arrow Flight Computer in Pad Configuration or controlling your own projects!
 ![IDE PIC](https://i.imgur.com/Cn5pzh5.png)
 
 
 PadCom is a Processing (Java) based application that reads, interprets and sends data via Serial. 
 PadCom makes it easy to create realistic launch sequences, and monitor your launchpad up to the first seconds of flight!
 
+PadCom is compatiable with "PadComLib" which is a Arduino Library that adds support for PadCom in only three lines!
 
 [Be sure to check out PadCom's sister project!](https://github.com/RockoonTechnologies/BoardCom)
 ### Features
@@ -13,10 +14,11 @@ PadCom makes it easy to create realistic launch sequences, and monitor your laun
  - Supports custom messages/functions
  - Multiple launch time options
  - Safe Abort system that will disable the pad in case of emergency
- - Can be customized inside the Arduino IDE
+ - Has custom library that supports all above features within the Arduino IDE (also supports the Web IDE)
 
 
 # Setup:
+## PadCom
 To setup PadCom, copy/download the application folder from the directory.
 
 *PadCom requires the latest version of Java & is only verified to work on Windows 10 
@@ -24,15 +26,21 @@ To setup PadCom, copy/download the application folder from the directory.
 Create a shortcut to for the .exe file, and your all set!
 Note: Upon the execution of PadCom, the program may take several seconds to finalize and interpret the data
 
-# Usage
+## PadComLib
+Download the library zip;
+[Follow this guide to install a Library from .zip](https://www.arduino.cc/en/guide/libraries#toc4)
+
+# Usage (PadCom)
+
+## PadCom
 ![IDE PIC](https://i.imgur.com/Cn5pzh5.png)
 
 The light green button labled "Launch Now" will begin the countdo
 wn at T-20 seconds
 The light yellow button labled "Begin Countdown" will begin the countdown at T-300 seconds
-Clicking the Red "Abort Button" will instantly pause the countdown and disarm the pad. Clicking one of the prior buttons will restart the countdown at there repsective times.
+Clicking the Red "Abort Button" will instantly pause the countdown and disarm the pad. Clicking one of the prior buttons will restart the countdown at there respective times.
 
-### Send a Custom Message
+### Send a Custom Message 
  *Custom Message is a Beta-Feature, it is not completely approved 
  
  To send a custom message, just type (there is a currently a bug where backspace does not work).
@@ -49,50 +57,30 @@ You can start a countdown with the respective button(s), Abort and send a precon
 
 
 
-# Integration - How to add support for your board
+# Integration (Syntax) - How to add support for your board
 
-This is a snippet of code that proves as an example of basic implementation.
+![code pic](https://i.imgur.com/ZIsldn3.png)
 
-```String incomingByte = ""; // for incoming serial data
-String custommsg = "poll";
-String padstatus = "Idle";
-
-void setup() {
-  Serial.begin(9600); // opens serial port, sets data rate to 9600 bps
-  pinMode(LED_BUILTIN, OUTPUT);
-}
-
-void loop() {
+The Library can be implemented in only three lines of code.
  
-  
-  Serial.print(padstatus); //prints pad status (can be changed like anyother variable depending on the pads status
-  delay(1000); // keep this, makes it easier on program
-  if (Serial.available() > 0) { // detects if new data is available
-    
-    incomingByte = Serial.readString();  // reads new data
-    if (incomingByte.equals(custommsg) == true) // sees if new data is your custom message
-     
-      digitalWrite(LED_BUILTIN, HIGH);
-      delay(500);
-      digitalWrite(LED_BUILTIN, LOW);
-     
-     }
-    if (incomingByte.equals("launch") == true) // checks if new data is the command to launch
-      //code to run. Ex: Mosfet Pin- HIGH
-      digitalWrite(LED_BUILTIN, HIGH);
-      delay(500);
-      digitalWrite(LED_BUILTIN, LOW);
-      
-     }
-}
-}
-```
+ ##### Initialize
+ 
+ ```initialize();``` simply enables Serial and establishes communication with the PadCom. ```initialize()``` should be located in the ```void Setup()``` section of your code, and is a boolean meaning it can be configured to be "true" or "false", On and Off respectively.
+ Ex: ```initialize(true);```
+ 
+##### padStatus
+ ```padStatus();``` sends the status of the launchpad to the PadCom program. ```padStatus();``` can be located in any function of your code. ```padStatus();```  is a limited string meaning it can be set to parenthesis (ie: ```padStatus("Idle");```) or a String Variable.
 
-Essentially, you can configure the variables, "custommsg" to whatever your custom message is, and append the code necessary for your code to take place, EX - move servo, LED, etc.
+**HOWEVER*** ```padStatus();``` can only be three modes: Idle, Countdown, Abort. Any-other string presented will be ignored and no data will be sent.
 
-When its ready to launch, PadCom will always output "launch", meaning don't change the ```if (incomingByte.equals("launch") == true)``` line
+##### mainCom
+ ```mainCom();``` sends is the main communication function of the library, so far it controls actual launch commands and custom messages. ```mainCom();``` can be located in any function of your code. ```mainCom();``` requires two operators, a string and a boolean  (ex: ```mainCom("custommsg", true);```) the string is the custom message, make this the custom text (no spaces, cap sensitive, numbers may be clipped) that you type in PadCom that sets an action.
+ *note: the ability to add a custom action is not available yet in the library*
+ The boolean controls whether you want to launch; "true" means yes, "false" means no
 
-# Troubleshooting
+
+
+# Troubleshooting (PadCom)
 
 *I installed the program but on boot the program is static and is a frozen grey window*
 
@@ -104,5 +92,5 @@ When its ready to launch, PadCom will always output "launch", meaning don't chan
 # RoadMap:
 
 - Finalize custommsg
-- Make lib
+- [x] Make lib 
 - Add support for minutes
