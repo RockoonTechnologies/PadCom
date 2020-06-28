@@ -44,6 +44,8 @@ Note: Upon the execution of PadCom, the program may take several seconds to fina
 Download the library zip;
 [Follow this guide to install a Library from .zip](https://www.arduino.cc/en/guide/libraries#toc4)
 
+Or use the lib manager!
+
 # Usage (PadCom)
 
 ## PadCom
